@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenSleep — WaterKansuza</title>
+  <meta name="description" content="OpenSleep — 18.75 kHz contactless sonar sleep tracking, 14-day exponential sleep debt engine, and local-first Android architecture by WaterKansuza.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="home">
+
+  <!-- Fixed 58px Navigation -->
+  <header class="site-nav">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="nav-wordmark">OpenSleep<span class="dot">.</span></a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#argument" class="nav-link" data-i18n="nav.process">NGUYÊN LÝ</a>
+        <a href="#demonstration" class="nav-link" data-i18n="nav.output">MÔ PHỎNG</a>
+        <a href="#material" class="nav-link" data-i18n="nav.material">VẬT LIỆU</a>
+        <a href="#measurements" class="nav-link" data-i18n="nav.numbers">THÔNG SỐ</a>
+        <a href="./projects.html" class="nav-link" data-i18n="nav.works">DỰ ÁN KHÁC</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-switch" id="lang-toggle" aria-label="Switch language">
+          <span data-lang-opt="vi" data-lang-active="true">VI</span> / <span data-lang-opt="en" data-lang-active="false">EN</span>
+        </button>
+        <a href="https://github.com/WaterKansuza/OpenSleep/releases/latest"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-secondary btn-nav"
+           data-apk-download
+           data-i18n="nav.cta">TẢI APK</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- The Single Travelling Product Cut-out -->
+  <div class="travelling-product" id="travelling-product" aria-hidden="true">
+    <img src="./assets/moon-cutout.png" alt="" width="862" height="865">
+  </div>
+
+  <main>
+    <!-- Section 1: Hero -->
+    <section class="hero" id="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="mono-kicker" data-i18n="hero.kicker">OPENSLEEP · V0.4.0 · GPL-3.0 · ANDROID 8.0+</p>
+          <h1 class="hero-title" data-i18n-html="hero.title">
+            Đo trọn vẹn giấc ngủ mà <em>không gửi đi</em> một byte dữ liệu nào.
+          </h1>
+          <p class="mono-body hero-lede" data-i18n="hero.lede">
+            Ứng dụng Android mã nguồn mở sử dụng sóng siêu âm 18.75 kHz xử lý ngay trên C++ NDK, kết hợp mô hình nợ ngủ suy giảm hàm mũ 14 ngày và nhận diện âm thanh ngoại tuyến bằng YAMNet.
+          </p>
+          <div class="btn-row">
+            <a href="https://github.com/WaterKansuza/OpenSleep/releases/latest"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-primary"
+               data-apk-download
+               data-i18n="hero.btnPrimary">TẢI BẢN MỚI NHẤT (.APK)</a>
+            <a href="https://github.com/WaterKansuza/OpenSleep"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary"
+               data-i18n="hero.btnSecondary">MÃ NGUỒN GITHUB</a>
+          </div>
+        </div>
+
+        <div class="hero-specs" aria-label="Verified technical specifications">
+          <div class="spec-cell">
+            <span class="spec-key" data-i18n="hero.spec1k">SÓNG MANG SONAR</span>
+            <span class="spec-val tabular">18,750 Hz CW</span>
+          </div>
+          <div class="spec-cell">
+            <span class="spec-key" data-i18n="hero.spec2k">CỬA SỔ NỢ NGỦ</span>
+            <span class="spec-val tabular">14d · λ=0.085</span>
+          </div>
+          <div class="spec-cell">
+            <span class="spec-key" data-i18n="hero.spec3k">MÔ HÌNH ÂM THANH</span>
+            <span class="spec-val tabular">YAMNet · 521</span>
+          </div>
+          <div class="spec-cell">
+            <span class="spec-key" data-i18n="hero.spec4k">CƠ SỞ DỮ LIỆU</span>
+            <span class="spec-val tabular">10 Room Tables</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spread Wordmark across the foot -->
+      <div class="wordmark-band" data-wordmark="hero" aria-hidden="true">
+        <span class="wm-char"><span class="wm-glyph" style="--i:0">O</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:1">P</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:2">E</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:3">N</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:4">S</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:5">L</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:6">E</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:7">E</span></span>
+        <span class="wm-char"><span class="wm-glyph" style="--i:8">P</span></span>
+      </div>
+    </section>
+
+    <!-- Section 2: Argument -->
+    <section class="band band-primary" id="argument">
+      <div class="wrap two-col">
+        <div class="col-sticky" data-reveal>
+          <p class="mono-label" data-i18n="arg.kicker">01 · LẬP LUẬN THIẾT KẾ</p>
+          <h2 class="section-title" data-i18n-html="arg.title">
+            Giấc ngủ không nên nằm sau <em>tường phí</em> hay máy chủ.
+          </h2>
+          <p class="mono-body" data-i18n="arg.lede">
+            Mỗi đêm theo dõi chỉ chạm vào bộ nhớ cục bộ của điện thoại. Thuật toán nợ ngủ, bộ lọc pha và mô hình âm thanh đều được giữ minh bạch để bạn tự đọc, tự kiểm chứng và tự sao lưu.
+          </p>
+        </div>
+
+        <div class="ledger" data-reveal>
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="arg.r1k">CỬA SỔ NỢ NGỦ 14 NGÀY</p>
+              <p class="mono-body" data-i18n="arg.r1d">
+                Tính sai lệch nhu cầu ngủ mỗi đêm với trọng số suy giảm hàm mũ w_k = e^(-0.085·k) và bất đối xứng phục hồi giới hạn 85%, tối đa 90 phút/ngày.
+              </p>
+            </div>
+            <span class="ledger-value tabular" data-i18n="arg.r1v">14d · λ=0.085</span>
+          </div>
+
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="arg.r2k">GIẢI ĐIỀU CHẾ I/Q KHÔNG CHẠM</p>
+              <p class="mono-body" data-i18n="arg.r2d">
+                Phát sóng liên tục 18.75 kHz ở 48 kHz qua Google Oboe, hạ mẫu 480:1 xuống 100 Hz, triệt tiêu thành phần tĩnh và mở pha atan2 để tách nhịp thở 0.10–0.55 Hz.
+              </p>
+            </div>
+            <span class="ledger-value tabular" data-i18n="arg.r2v">18,750 Hz</span>
+          </div>
+
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="arg.r3k">NHẬN DIỆN ÂM THANH TIẾT KIỆM PIN</p>
+              <p class="mono-body" data-i18n="arg.r3d">
+                Duy trì bộ đệm vòng trên RAM và chỉ đánh thức bộ suy luận YAMNet LiteRT (15,600 mẫu @ 16 kHz) khi âm thanh vượt ngưỡng nền phòng.
+              </p>
+            </div>
+            <span class="ledger-value tabular" data-i18n="arg.r3v">521 classes</span>
+          </div>
+
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="arg.r4k">DỮ LIỆU NẰM TRONG SANDBOX</p>
+              <p class="mono-body" data-i18n="arg.r4d">
+                Không tài khoản, không đồng bộ đám mây; xuất và nhập toàn bộ lịch sử qua Storage Access Framework dạng tệp JSON cục bộ.
+              </p>
+            </div>
+            <span class="ledger-value tabular" data-i18n="arg.r4v">JSON / SAF</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Demonstration -->
+    <section class="band band-primary band-ruled-top" id="demonstration">
+      <div class="wrap">
+        <div class="demo-header" data-reveal>
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <p class="mono-label" data-i18n="demo.kicker">02 · TRÌNH DIỄN ĐẦU RA</p>
+            <h2 class="section-title" data-i18n-html="demo.title">
+              Tín hiệu thật tự <em>vẽ lại</em> đường đi của nó.
+            </h2>
+          </div>
+          <p class="mono-body" data-i18n="demo.lede">
+            Chọn một chế độ để chuyển đổi cùng một đường SVG giữa sóng pha nhịp thở Sonar, đường suy giảm nợ ngủ 14 ngày và đường cong nhịp sinh học Process C.
+          </p>
+        </div>
+
+        <div class="variant-row" role="group" aria-label="Signal output variants">
+          <button type="button" class="variant-btn" data-variant="sonar" aria-pressed="true" data-i18n="demo.v1">
+            01 · PHA THỞ SONAR (18.75 KHZ)
+          </button>
+          <button type="button" class="variant-btn" data-variant="debt" aria-pressed="false" data-i18n="demo.v2">
+            02 · SUY GIẢM NỢ NGỦ 14 NGÀY
+          </button>
+          <button type="button" class="variant-btn" data-variant="circadian" aria-pressed="false" data-i18n="demo.v3">
+            03 · ĐƯỜNG CONG NHỊP SINH HỌC
+          </button>
+        </div>
+
+        <div class="demo-panel" data-reveal>
+          <div class="demo-panel-meta">
+            <span id="demo-panel-title">C++17 · I/Q BASEBAND 100 HZ · BANDPASS 0.10–0.55 HZ</span>
+            <span class="tabular" id="demo-panel-scale">SPAN: 20.0 S (2,000 SAMPLES)</span>
+          </div>
+
+          <div class="demo-svg-wrap">
+            <svg class="demo-svg" viewBox="0 0 900 260" preserveAspectRatio="none" aria-labelledby="demo-panel-title">
+              <!-- Subtle hairline reference grid -->
+              <line class="demo-grid-line" x1="0" y1="52" x2="900" y2="52" />
+              <line class="demo-axis-line" x1="0" y1="130" x2="900" y2="130" />
+              <line class="demo-grid-line" x1="0" y1="208" x2="900" y2="208" />
+              <line class="demo-grid-line" x1="225" y1="0" x2="225" y2="260" />
+              <line class="demo-grid-line" x1="450" y1="0" x2="450" y2="260" />
+              <line class="demo-grid-line" x1="675" y1="0" x2="675" y2="260" />
+              <!-- Single dynamically updated path drawn with getTotalLength() -->
+              <path id="demo-signal-path"
+                    class="demo-signal-path"
+                    stroke-width="2.2"
+                    d="M 0,130 C 30,130 45,58 75,58 C 105,58 120,202 150,202 C 180,202 195,62 225,62 C 255,62 270,198 300,198 C 330,198 345,54 375,54 C 405,54 420,206 450,206 C 480,206 495,66 525,66 C 555,66 570,194 600,194 C 630,194 645,58 675,58 C 705,58 720,202 750,202 C 780,202 795,64 825,64 C 855,64 870,150 900,130" />
+            </svg>
+          </div>
+        </div>
+
+        <div class="demo-facts" aria-live="polite">
+          <div class="demo-fact">
+            <span class="demo-fact-label" id="fact-1-label">DẢI THÔNG LỌC</span>
+            <span class="demo-fact-value tabular" id="fact-1-val">0.10 – 0.55 Hz Biquad</span>
+          </div>
+          <div class="demo-fact">
+            <span class="demo-fact-label" id="fact-2-label">TỐC ĐỘ BASEBAND</span>
+            <span class="demo-fact-value tabular" id="fact-2-val">100 Hz (480:1 decimated)</span>
+          </div>
+          <div class="demo-fact">
+            <span class="demo-fact-label" id="fact-3-label">CỬA SỔ ĐỆM THỞ</span>
+            <span class="demo-fact-value tabular" id="fact-3-val">2,000 mẫu (20 giây)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Material -->
+    <section class="band band-secondary band-ruled-top" id="material">
+      <div class="wrap two-col">
+        <div class="col-sticky" data-reveal>
+          <p class="mono-label" data-i18n="mat.kicker">03 · VẬT LIỆU KỸ THUẬT</p>
+          <h2 class="section-title" data-i18n-html="mat.title">
+            Cấu trúc <em>thuần bản địa</em>, không phụ thuộc SDK quảng cáo.
+          </h2>
+          <p class="mono-body" data-i18n="mat.lede">
+            Toàn bộ ngăn xếp từ âm thanh C++ tầng thấp đến giao diện Jetpack Compose được khai báo tường minh trong mã nguồn mở GPL-3.0.
+          </p>
+        </div>
+
+        <div class="ledger" data-reveal>
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="mat.r1k">LÕI DSP C++17 & OBOE</p>
+              <p class="mono-body" data-i18n="mat.r1d">
+                Biên dịch bằng NDK + CMake 3.22.1 với cờ -O3 -ffast-math cho hai kiến trúc arm64-v8a và armeabi-v7a, chạy trực tiếp qua JNI.
+              </p>
+            </div>
+            <span class="ledger-value tabular">Oboe 1.11.0</span>
+          </div>
+
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="mat.r2k">PHÂN LOẠI ÂM THANH CỤC BỘ</p>
+              <p class="mono-body" data-i18n="mat.r2d">
+                Tệp yamnet.tflite không nén trong assets, chạy bằng LiteRT 2.3.0 trên 2 luồng để gắn nhãn ngáy, giọng nói, cử động và tạp âm phòng.
+              </p>
+            </div>
+            <span class="ledger-value tabular">LiteRT 2.3.0</span>
+          </div>
+
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="mat.r3k">LƯỢC ĐỒ ROOM SQLITE</p>
+              <p class="mono-body" data-i18n="mat.r3d">
+                10 bảng lưu phiên ngủ, epoch 30 giây, nhật ký mơ, sự kiện âm thanh, thói quen, báo thức và snapshot nợ ngủ hàng ngày; tắt auto-backup hệ thống.
+              </p>
+            </div>
+            <span class="ledger-value tabular">Room 2.8.5</span>
+          </div>
+
+          <div class="ledger-row">
+            <div class="ledger-main">
+              <p class="mono-label" data-i18n="mat.r4k">PHẠM VI QUYỀN MẠNG</p>
+              <p class="mono-body" data-i18n="mat.r4d">
+                Dữ liệu giấc ngủ không bao giờ rời khỏi máy. Quyền INTERNET trong Manifest chỉ phục vụ kiểm tra và tải APK bản phát hành từ GitHub Releases.
+              </p>
+            </div>
+            <span class="ledger-value tabular">GitHub APK</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Measurements -->
+    <section class="band band-primary band-ruled-top" id="measurements">
+      <div class="wrap">
+        <div class="measurements-head" data-reveal>
+          <p class="mono-label" data-i18n="meas.kicker">04 · BẢNG ĐO LƯỜNG XÁC MINH</p>
+          <h2 class="section-title" data-i18n-html="meas.title">
+            Chỉ những con số đọc được từ <em>mã nguồn</em>.
+          </h2>
+          <p class="mono-body" data-i18n="meas.lede">
+            Mọi giá trị dưới đây khớp chính xác với hằng số trong SleepDebtEngine, sonar_engine.h, NightSoundClassifier và build.gradle.kts phiên bản 0.4.0.
+          </p>
+        </div>
+
+        <div class="measure-list" data-reveal>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m1k">TẦN SỐ SÓNG MANG</span>
+            <span class="measure-desc" data-i18n="meas.m1d">Tần số phát liên tục mặc định cho luồng Sonar Oboe (SonarEngine::start)</span>
+            <span class="measure-figure tabular">18,750 Hz</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m2k">TỶ LỆ HẠ MẪU I/Q</span>
+            <span class="measure-desc" data-i18n="meas.m2d">Giảm tốc độ lấy mẫu từ đầu vào 48,000 Hz xuống baseband 100 Hz</span>
+            <span class="measure-figure tabular">480 : 1</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m3k">BĂNG THÔNG NHỊP THỞ</span>
+            <span class="measure-desc" data-i18n="meas.m3d">Bộ lọc Biquad High-Pass &amp; Low-Pass tách chuyển động lồng ngực</span>
+            <span class="measure-figure tabular">0.10 – 0.55 Hz</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m4k">CHU KỲ TRƯỢT NỢ NGỦ</span>
+            <span class="measure-desc" data-i18n="meas.m4d">Số ngày trong cửa sổ tích lũy với hệ số suy giảm mặc định λ = 0.085</span>
+            <span class="measure-figure tabular" data-i18n="meas.m4v">14 ngày</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m5k">MIỀN NHU CẦU SINH LÝ</span>
+            <span class="measure-desc" data-i18n="meas.m5d">Khoảng giới hạn nhu cầu ngủ cá nhân (6.5 đến 10.0 giờ)</span>
+            <span class="measure-figure tabular" data-i18n="meas.m5v">390 – 600 phút</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m6k">HỆ SỐ HỒI PHỤC &amp; NGỦ TRƯA</span>
+            <span class="measure-desc" data-i18n="meas.m6d">Trọng số quy đổi giấc ngủ trưa (≥15 phút) và trần trả nợ mỗi ngày</span>
+            <span class="measure-figure tabular" data-i18n="meas.m6v">85% / 90 phút</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m7k">KHUNG MẪU YAMNET</span>
+            <span class="measure-desc" data-i18n="meas.m7d">Số mẫu float ở 16 kHz (0.975s) cho mỗi lần phân loại 521 lớp âm thanh</span>
+            <span class="measure-figure tabular" data-i18n="meas.m7v">15,600 mẫu</span>
+          </div>
+          <div class="measure-row">
+            <span class="measure-label" data-i18n="meas.m8k">PHẠM VI ANDROID HỖ TRỢ</span>
+            <span class="measure-desc" data-i18n="meas.m8d">Từ Android 8.0 (minSdk 26 với AAudio) đến SDK mục tiêu 37</span>
+            <span class="measure-figure tabular">API 26 – 37</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Close -->
+    <section class="close-band" id="close">
+      <div class="wrap">
+        <div class="close-top" data-reveal>
+          <div style="display:flex; flex-direction:column; gap:18px;">
+            <p class="mono-label" data-i18n="close.kicker">05 · PHÁT HÀNH &amp; TÁC GIẢ</p>
+            <h2 class="close-title" data-i18n-html="close.title">
+              Cài đặt trên máy bạn, <em>giữ trọn</em> trên máy bạn.
+            </h2>
+          </div>
+
+          <div class="close-side">
+            <p class="close-fineprint" data-i18n="close.fineprint">
+              OpenSleep v0.4.0 được phát hành dưới giấy phép GPL-3.0 bởi WaterKansuza. Bạn cũng có thể xem thêm các dự án cá nhân khác như Eduhub và bộ macro tự động hóa.
+            </p>
+            <div class="btn-row">
+              <a href="https://github.com/WaterKansuza/OpenSleep/releases/latest"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primary"
+                 data-apk-download
+                 data-i18n="close.btnPrimary">TẢI BẢN MỚI NHẤT (.APK)</a>
+              <a href="./projects.html"
+                 class="btn btn-secondary"
+                 data-i18n="close.btnSecondary">XEM DỰ ÁN KHÁC →</a>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer-strip">
+          <span>WATERKANSUZA · OPENSLEEP V0.4.0 · GPL-3.0</span>
+          <div class="footer-links">
+            <a href="https://github.com/WaterKansuza/OpenSleep" target="_blank" rel="noopener noreferrer">GITHUB</a>
+            <a href="https://github.com/WaterKansuza/OpenSleep/releases/latest" target="_blank" rel="noopener noreferrer" data-apk-download>RELEASES</a>
+            <a href="./projects.html" data-i18n="footer.projects">EDUHUB &amp; MACROS</a>
+          </div>
+        </footer>
+      </div>
+
+      <!-- Cropped footer spread wordmark -->
+      <div class="wordmark-band" data-wordmark="close" aria-hidden="true">
+        <span class="wm-char">O</span>
+        <span class="wm-char">P</span>
+        <span class="wm-char">E</span>
+        <span class="wm-char">N</span>
+        <span class="wm-char">S</span>
+        <span class="wm-char">L</span>
+        <span class="wm-char">E</span>
+        <span class="wm-char">E</span>
+        <span class="wm-char">P</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="./i18n.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>

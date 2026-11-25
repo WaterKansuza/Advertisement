@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WaterKansuza — Eduhub &amp; Personal Works</title>
+  <meta name="description" content="Personal projects by WaterKansuza: OpenSleep Android app, Eduhub student quiz web application, and Roblox / game automation macros.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="projects">
+
+  <!-- Fixed 58px Navigation -->
+  <header class="site-nav">
+    <div class="wrap nav-inner">
+      <a href="./index.html" class="nav-wordmark">OpenSleep<span class="dot">.</span></a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="./index.html" class="nav-link" data-i18n="nav.home">OPENSLEEP</a>
+        <a href="#student-web" class="nav-link">EDUHUB</a>
+        <a href="#macros" class="nav-link">MACROS</a>
+        <a href="./projects.html" class="nav-link is-active" data-i18n="nav.works">DỰ ÁN KHÁC</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="lang-switch" id="lang-toggle" aria-label="Switch language">
+          <span data-lang-opt="vi" data-lang-active="true">VI</span> / <span data-lang-opt="en" data-lang-active="false">EN</span>
+        </button>
+        <a href="https://github.com/WaterKansuza/OpenSleep/releases/latest"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-secondary btn-nav"
+           data-apk-download
+           data-i18n="nav.cta">TẢI APK</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Header Band -->
+    <section class="projects-hero">
+      <div class="wrap projects-hero-grid">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <p class="mono-kicker" data-i18n="proj.kicker">WATERKANSUZA · DANH MỤC DỰ ÁN CÁ NHÂN</p>
+          <h1 class="hero-title" data-i18n-html="proj.title">
+            Những công cụ nhỏ được viết để <em>tự dùng</em> và chia sẻ mở.
+          </h1>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:20px;">
+          <p class="mono-body" data-i18n="proj.lede">
+            Ngoài ứng dụng Android OpenSleep, đây là website học tập dành cho sinh viên và các macro tự động hóa trò chơi được lưu trữ công khai trên GitHub.
+          </p>
+          <div class="btn-row">
+            <a href="./index.html" class="btn btn-secondary" data-i18n="proj.backBtn">← QUAY LẠI OPENSLEEP</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship Cross-Reference -->
+    <section class="band band-primary" id="flagship">
+      <div class="wrap">
+        <p class="mono-label" style="margin-bottom:20px;" data-i18n="proj.cat1">01 · SẢN PHẨM CHỦ ĐẠO</p>
+        <div class="ledger" data-reveal>
+          <div class="project-row">
+            <div class="project-meta">
+              <span class="mono-label">OPENSLEEP · V0.4.0</span>
+              <span class="project-tag" data-i18n="proj.os.meta">ANDROID NATIVE · C++ NDK</span>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">OpenSleep</h2>
+              <p class="mono-body" data-i18n="proj.os.desc">
+                Theo dõi giấc ngủ không chạm bằng sóng siêu âm 18.75 kHz, động cơ tính nợ ngủ 14 ngày và nhận diện âm thanh YAMNet cục bộ.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="./index.html" class="btn btn-secondary" data-i18n="proj.os.btnPage">XEM TRANG GIỚI THIỆU</a>
+              <a href="https://github.com/WaterKansuza/OpenSleep/releases/latest"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primary"
+                 data-apk-download
+                 data-i18n="proj.os.btnApk">TẢI APK MỚI NHẤT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Website: Eduhub -->
+    <section class="band band-secondary band-ruled-top" id="student-web">
+      <div class="wrap">
+        <p class="mono-label" style="margin-bottom:20px;" data-i18n="proj.cat2">02 · WEBSITE CHO HỌC SINH / SINH VIÊN</p>
+        <div class="ledger" data-reveal>
+          <div class="project-row">
+            <div class="project-meta">
+              <span class="mono-label">EDUHUB · UTT</span>
+              <span class="project-tag" data-i18n="proj.edu.meta">WEB APP · TRẮC NGHIỆM</span>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">Eduhub</h2>
+              <p class="mono-body" data-i18n="proj.edu.desc">
+                Nền tảng hỗ trợ sinh viên UTT nói riêng và các trường khác nói chung tự tạo bài kiểm tra Multiple Choice cho bản thân hoặc luyện tập từ các mẫu có sẵn.
+              </p>
+              <p class="mono-body" style="color:var(--ink-muted);" data-i18n="proj.edu.note">
+                Trạng thái: Giao diện đã triển khai trên GitHub Pages, phần kết nối cơ sở dữ liệu hiện đang bảo trì.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="https://waterkansuza.github.io/eduhub/"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primary"
+                 data-i18n="proj.edu.btnLive">MỞ EDUHUB</a>
+              <a href="https://github.com/WaterKansuza/eduhub"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-secondary"
+                 data-i18n="proj.edu.btnRepo">MÃ NGUỒN GITHUB</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Macros -->
+    <section class="band band-primary band-ruled-top" id="macros">
+      <div class="wrap">
+        <p class="mono-label" style="margin-bottom:20px;" data-i18n="proj.cat3">03 · MACRO &amp; TỰ ĐỘNG HÓA</p>
+        <div class="ledger" data-reveal>
+          <div class="project-row">
+            <div class="project-meta">
+              <span class="mono-label">MACRO · 01</span>
+              <span class="project-tag" data-i18n="proj.m1.meta">ROBLOX · CRITICAL REVENGEANCE</span>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">Fishing-CriticalRevengeance</h2>
+              <p class="mono-body" data-i18n="proj.m1.desc">
+                Macro hỗ trợ tự động hóa thao tác trong minigame câu cá của trò chơi Critical Revengeance trên nền tảng Roblox.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/WaterKansuza/Fishing-CriticalRevengeance"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-secondary"
+                 data-i18n="proj.btnRepo">XEM REPOSITORY</a>
+            </div>
+          </div>
+
+          <div class="project-row">
+            <div class="project-meta">
+              <span class="mono-label">MACRO · 02</span>
+              <span class="project-tag" data-i18n="proj.m2.meta">ROBLOX · ARCANE LINEAGE</span>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">Macro-ArcaneLineage</h2>
+              <p class="mono-body" data-i18n="proj.m2.desc">
+                Macro hỗ trợ tự động farm vật phẩm trong trò chơi Arcane Lineage.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/WaterKansuza/Macro-ArcaneLineage"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-secondary"
+                 data-i18n="proj.btnRepo">XEM REPOSITORY</a>
+            </div>
+          </div>
+
+          <div class="project-row">
+            <div class="project-meta">
+              <span class="mono-label">MACRO · 03</span>
+              <span class="project-tag" data-i18n="proj.m3.meta">AFK UTILITY · AN AVERAGE CAMPAIGN</span>
+            </div>
+            <div class="project-body">
+              <h2 class="project-name">AFK-An-Average-Campaign</h2>
+              <p class="mono-body" data-i18n="proj.m3.desc">
+                Công cụ hỗ trợ treo máy (AFK) để farm boon trong trò chơi An Average Campaign.
+              </p>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/WaterKansuza/AFK-An-Average-Campaign"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-secondary"
+                 data-i18n="proj.btnRepo">XEM REPOSITORY</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cropped Footer Wordmark Band -->
+    <section class="close-band">
+      <div class="wrap">
+        <footer class="footer-strip" style="border-top:none; padding-top:0;">
+          <span>WATERKANSUZA · OPENSLEEP · EDUHUB · MACROS</span>
+          <div class="footer-links">
+            <a href="./index.html" data-i18n="nav.home">OPENSLEEP</a>
+            <a href="https://github.com/WaterKansuza" target="_blank" rel="noopener noreferrer">GITHUB / WATERKANSUZA</a>
+          </div>
+        </footer>
+      </div>
+
+      <div class="wordmark-band" data-wordmark="close" aria-hidden="true">
+        <span class="wm-char">W</span>
+        <span class="wm-char">A</span>
+        <span class="wm-char">T</span>
+        <span class="wm-char">E</span>
+        <span class="wm-char">R</span>
+        <span class="wm-char">K</span>
+        <span class="wm-char">A</span>
+        <span class="wm-char">N</span>
+        <span class="wm-char">S</span>
+        <span class="wm-char">U</span>
+        <span class="wm-char">Z</span>
+        <span class="wm-char">A</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="./i18n.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
